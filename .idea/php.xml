@@ -45,6 +45,7 @@
       <path value="$PROJECT_DIR$/vendor/aptoma/twig-markdown" />
       <path value="$PROJECT_DIR$/vendor/psy/psysh" />
       <path value="$PROJECT_DIR$/vendor/jdorn/sql-formatter" />
+      <path value="$PROJECT_DIR$/vendor/twbs/bootstrap" />
     </include_path>
   </component>
 </project>

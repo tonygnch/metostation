@@ -1,0 +1,50 @@
+2018-02-03 08:15:45 Error: [Cake\Datasource\Exception\RecordNotFoundException] Record not found in table "panels"
+Request URL: /debug-kit/panels/view/undefined
+Referer URL: http://meteostation.local/debug-kit/toolbar/1db09297-574c-46fe-8475-3b3f8bdd8270
+Stack Trace:
+#0 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/ORM/Table.php(1445): Cake\ORM\Query->firstOrFail()
+#1 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/debug_kit/src/Controller/PanelsController.php(95): Cake\ORM\Table->get(Array)
+#2 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Controller/Controller.php(440): DebugKit\Controller\PanelsController->view('undefined')
+#3 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#4 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(DebugKit\Controller\PanelsController))
+#5 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/BaseApplication.php(108): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(104): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 /Users/tonyganchev/Projects/meteostation/webroot/index.php(40): Cake\Http\Server->run()
+#18 {main}
+
+
+2018-02-03 08:15:47 Error: [Cake\Datasource\Exception\RecordNotFoundException] Record not found in table "panels"
+Request URL: /debug-kit/panels/view/undefined
+Referer URL: http://meteostation.local/debug-kit/toolbar/1db09297-574c-46fe-8475-3b3f8bdd8270
+Stack Trace:
+#0 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/ORM/Table.php(1445): Cake\ORM\Query->firstOrFail()
+#1 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/debug_kit/src/Controller/PanelsController.php(95): Cake\ORM\Table->get(Array)
+#2 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Controller/Controller.php(440): DebugKit\Controller\PanelsController->view('undefined')
+#3 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#4 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(DebugKit\Controller\PanelsController))
+#5 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/BaseApplication.php(108): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(104): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 /Users/tonyganchev/Projects/meteostation/webroot/index.php(40): Cake\Http\Server->run()
+#18 {main}
+
+
