@@ -2,6 +2,7 @@
 namespace App\Model\Entity;
 
 use Cake\ORM\Entity;
+use Cake\ORM\TableRegistry;
 
 /**
  * WindSpeed Entity
@@ -26,4 +27,22 @@ class WindSpeed extends Entity
         'DateAndTime' => true,
         'Value' => true
     ];
+
+    /**
+     * Get last wind speed value
+     * @return mixed
+     */
+    public function getLastWindValue()
+    {
+        $tableRegistry = new TableRegistry();
+        $table = $tableRegistry->getWindSpeedTable();
+
+        $lastWindQuery = $table->find()
+                               ->select('Value')
+                               ->where(['id >' => 1])
+                               ->orderDesc('DateAndTime')
+                               ->limit(1);
+        $wind = $lastWindQuery->first();
+        return $wind->Value;
+    }
 }

@@ -1,0 +1,10 @@
+/*
+* Design fixes for the newest Internet Explorer versions
+* "<!--[if IE]>" doesn't work on IE10+ so I have to use...this, Microsoft logic at its finest
+*/
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    div.col-sm-12 i.fa {
+        font-size: 4px !important;
+    }
+}

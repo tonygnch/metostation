@@ -2,6 +2,7 @@
 namespace App\Model\Entity;
 
 use Cake\ORM\Entity;
+use Cake\ORM\TableRegistry;
 
 /**
  * EnergyProduction Entity
@@ -26,4 +27,22 @@ class EnergyProduction extends Entity
         'DateAndTime' => true,
         'Value' => true
     ];
+
+    /**
+     * Get last energy production value
+     * @return mixed
+     */
+    public function getLastEnergyProduction()
+    {
+        $tableRegistry = new TableRegistry();
+        $table = $tableRegistry->getEnergyProductionTable();
+
+        $lastEnergyProductionValue = $table->find()
+            ->select('Value')
+            ->where(['id >' => 1])
+            ->orderDesc('DateAndTime')
+            ->limit(1);
+        $energy = $lastEnergyProductionValue->first();
+        return $energy->Value;
+    }
 }

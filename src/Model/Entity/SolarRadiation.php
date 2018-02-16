@@ -2,6 +2,7 @@
 namespace App\Model\Entity;
 
 use Cake\ORM\Entity;
+use Cake\ORM\TableRegistry;
 
 /**
  * SolarRadiation Entity
@@ -26,4 +27,22 @@ class SolarRadiation extends Entity
         'DateAndTime' => true,
         'Value' => true
     ];
+
+    /**
+     * Get last solar radiation value
+     * @return mixed
+     */
+    public function getLastSolarRadiationValue()
+    {
+        $tableRegistry = new TableRegistry();
+        $table = $tableRegistry->getSolarRadiationTable();
+
+        $lastSolarRadiationQuery = $table->find()
+            ->select('Value')
+            ->where(['id >' => 1])
+            ->orderDesc('DateAndTime')
+            ->limit(1);
+        $solar = $lastSolarRadiationQuery->first();
+        return $solar->Value;
+    }
 }

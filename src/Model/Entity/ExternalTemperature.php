@@ -2,6 +2,7 @@
 namespace App\Model\Entity;
 
 use Cake\ORM\Entity;
+use Cake\ORM\TableRegistry;
 
 /**
  * ExternalTemperature Entity
@@ -26,4 +27,22 @@ class ExternalTemperature extends Entity
         'DateAndTime' => true,
         'Value' => true
     ];
+
+    /**
+     * Get last temperature value
+     * @return mixed
+     */
+    public function getLastTemperatureValue()
+    {
+        $tableRegistry = new TableRegistry();
+        $table = $tableRegistry->getExternalTemperatureTable();
+
+        $lastTempQuery = $table->find()
+                               ->select('Value')
+                               ->where(['id >' => 1])
+                               ->orderDesc('DateAndTime')
+                               ->limit(1);
+        $temp = $lastTempQuery->first();
+        return $temp->Value;
+    }
 }

@@ -222,13 +222,13 @@ return [
             'className' => 'Cake\Database\Connection',
             'driver' => 'Cake\Database\Driver\Mysql',
             'persistent' => false,
-            'host' => 'localhost',
             /**
              * CakePHP will use the default DB port based on the driver selected
              * MySQL on MAMP uses port 8889, MAMP users will want to uncomment
              * the following line and set the port accordingly
              */
             //'port' => 'non_standard_port_number',
+            'host' => 'localhost',
             'username' => 'root',
             'password' => 'root',
             'database' => 'meteostation',
@@ -238,16 +238,16 @@ return [
             'cacheMetadata' => true,
             'log' => false,
 
-            //remote
-            // 'host' => 'johnny.heliohost.org',
-            // 'username' => 'bsumeteo_user',
-            // 'password' => 'meteo1danni',
-            // 'database' => 'bsumeteo_db1',
-            // 'encoding' => 'utf8',
-            // 'timezone' => 'UTC',
-            // 'flags' => [],
-            // 'cacheMetadata' => true,
-            // 'log' => false,
+//            remote
+//             'host' => 'johnny.heliohost.org',
+//             'username' => 'bsumeteo_user',
+//             'password' => 'meteo1danni',
+//             'database' => 'bsumeteo_db1',
+//             'encoding' => 'utf8',
+//             'timezone' => 'UTC',
+//             'flags' => [],
+//             'cacheMetadata' => true,
+//             'log' => false,
 
             /**
              * Set identifier quoting to true if you are using reserved words or

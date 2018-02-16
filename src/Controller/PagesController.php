@@ -14,10 +14,15 @@
  */
 namespace App\Controller;
 
+use App\Model\Entity\EnergyProduction;
+use App\Model\Entity\ExternalTemperature;
+use App\Model\Entity\SolarRadiation;
+use App\Model\Entity\WindSpeed;
 use Cake\Core\Configure;
 use Cake\Network\Exception\ForbiddenException;
 use Cake\Network\Exception\NotFoundException;
 use Cake\View\Exception\MissingTemplateException;
+use Cake\ORM\TableRegistry;
 
 /**
  * Static content controller
@@ -58,6 +63,10 @@ class PagesController extends AppController
         $this->set(compact('page', 'subpage'));
 
         try {
+            $this->sendVariableToView("lastTemp", $this->getLastTemperature());
+            $this->sendVariableToView("lastWind", $this->getLastWindSpeedValue());
+            $this->sendVariableToView("lastSolarRadiation", $this->getLastSolarRadiationValue());
+            $this->sendVariableToView("lastEnergyProduction", $this->getLastEnergyProductionValue());
             $this->render(implode('/', $path));
         } catch (MissingTemplateException $exception) {
             if (Configure::read('debug')) {
@@ -66,4 +75,44 @@ class PagesController extends AppController
             throw new NotFoundException();
         }
     }
+
+    private function getLastTemperature()
+    {
+        $externalTemperature = new ExternalTemperature();
+        $temperature = $externalTemperature->getLastTemperatureValue();
+
+        return $temperature;
+    }
+
+    public function getLastWindSpeedValue()
+    {
+        $windSpeed = new WindSpeed();
+        $wind = $windSpeed->getLastWindValue();
+
+        return $wind;
+
+    }
+
+    public function getLastSolarRadiationValue()
+    {
+        $solarRadiation = new SolarRadiation();
+        $solar = $solarRadiation->getLastSolarRadiationValue();
+
+        return $solar;
+    }
+
+    public function getLastEnergyProductionValue()
+    {
+        $energyProduction = new EnergyProduction();
+        $energy = $energyProduction->getLastEnergyProduction();
+
+        return $energy;
+    }
+
+    public function sendVariableToView($variableName, $value)
+    {
+        $this->set($variableName, $value);
+    }
+
+
 }

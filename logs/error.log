@@ -48,3 +48,1011 @@ Stack Trace:
 #18 {main}
 
 
+2018-02-03 12:52:16 Warning: Warning (512): Unable to emit headers. Headers sent in file=/Users/tonyganchev/Projects/meteostation/src/Controller/PagesController.php line=63 in [/Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 48]
+Request URL: /
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+Cake\Http\ResponseEmitter::emit() - CORE/src/Http/ResponseEmitter.php, line 48
+Cake\Http\Server::emit() - CORE/src/Http/Server.php, line 106
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2018-02-03 12:52:16 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/tonyganchev/Projects/meteostation/src/Controller/PagesController.php:63) in [/Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 148]
+Request URL: /
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE/src/Http/ResponseEmitter.php, line 148
+Cake\Http\ResponseEmitter::emit() - CORE/src/Http/ResponseEmitter.php, line 54
+Cake\Http\Server::emit() - CORE/src/Http/Server.php, line 106
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2018-02-03 12:52:16 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/tonyganchev/Projects/meteostation/src/Controller/PagesController.php:63) in [/Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 181]
+Request URL: /
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE/src/Http/ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE/src/Http/ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE/src/Http/Server.php, line 106
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2018-02-03 12:52:16 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/tonyganchev/Projects/meteostation/src/Controller/PagesController.php:63) in [/Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 181]
+Request URL: /
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE/src/Http/ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE/src/Http/ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE/src/Http/Server.php, line 106
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2018-02-03 15:20:50 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'bsumeteo_db1.external_temperature' doesn't exist
+Request URL: /
+Stack Trace:
+#0 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Database/Schema/Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'external_temper...', Array, Object(Cake\Database\Schema\TableSchema))
+#1 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Database/Schema/CachedCollection.php(63): Cake\Database\Schema\Collection->describe('external_temper...', Array)
+#2 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/ORM/Table.php(532): Cake\Database\Schema\CachedCollection->describe('external_temper...')
+#3 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/ORM/Query.php(211): Cake\ORM\Table->getSchema()
+#4 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/ORM/Query.php(168): Cake\ORM\Query->addDefaultTypes(Object(App\Model\Table\ExternalTemperatureTable))
+#5 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/ORM/Table.php(1582): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(App\Model\Table\ExternalTemperatureTable))
+#6 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/ORM/Table.php(1182): Cake\ORM\Table->query()
+#7 /Users/tonyganchev/Projects/meteostation/src/Model/Entity/ExternalTemperature.php(40): Cake\ORM\Table->find()
+#8 /Users/tonyganchev/Projects/meteostation/src/Controller/PagesController.php(78): App\Model\Entity\ExternalTemperature->getLastTemperatureValue()
+#9 /Users/tonyganchev/Projects/meteostation/src/Controller/PagesController.php(64): App\Controller\PagesController->getLastTemperature()
+#10 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Controller/Controller.php(440): App\Controller\PagesController->display('home')
+#11 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#12 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\PagesController))
+#13 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/BaseApplication.php(108): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(104): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#21 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#23 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#24 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 /Users/tonyganchev/Projects/meteostation/webroot/index.php(40): Cake\Http\Server->run()
+#26 {main}
+
+
+2018-02-03 15:20:58 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'bsumeteo_db1.external_temperature' doesn't exist
+Request URL: /
+Stack Trace:
+#0 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Database/Schema/Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'external_temper...', Array, Object(Cake\Database\Schema\TableSchema))
+#1 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Database/Schema/CachedCollection.php(63): Cake\Database\Schema\Collection->describe('external_temper...', Array)
+#2 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/ORM/Table.php(532): Cake\Database\Schema\CachedCollection->describe('external_temper...')
+#3 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/ORM/Query.php(211): Cake\ORM\Table->getSchema()
+#4 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/ORM/Query.php(168): Cake\ORM\Query->addDefaultTypes(Object(App\Model\Table\ExternalTemperatureTable))
+#5 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/ORM/Table.php(1582): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(App\Model\Table\ExternalTemperatureTable))
+#6 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/ORM/Table.php(1182): Cake\ORM\Table->query()
+#7 /Users/tonyganchev/Projects/meteostation/src/Model/Entity/ExternalTemperature.php(40): Cake\ORM\Table->find()
+#8 /Users/tonyganchev/Projects/meteostation/src/Controller/PagesController.php(78): App\Model\Entity\ExternalTemperature->getLastTemperatureValue()
+#9 /Users/tonyganchev/Projects/meteostation/src/Controller/PagesController.php(64): App\Controller\PagesController->getLastTemperature()
+#10 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Controller/Controller.php(440): App\Controller\PagesController->display('home')
+#11 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#12 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\PagesController))
+#13 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/BaseApplication.php(108): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(104): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#21 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#23 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#24 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 /Users/tonyganchev/Projects/meteostation/webroot/index.php(40): Cake\Http\Server->run()
+#26 {main}
+
+
+2018-02-03 15:21:05 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'bsumeteo_db1.external_temperature' doesn't exist
+Request URL: /
+Stack Trace:
+#0 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Database/Schema/Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'external_temper...', Array, Object(Cake\Database\Schema\TableSchema))
+#1 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Database/Schema/CachedCollection.php(63): Cake\Database\Schema\Collection->describe('external_temper...', Array)
+#2 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/ORM/Table.php(532): Cake\Database\Schema\CachedCollection->describe('external_temper...')
+#3 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/ORM/Query.php(211): Cake\ORM\Table->getSchema()
+#4 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/ORM/Query.php(168): Cake\ORM\Query->addDefaultTypes(Object(App\Model\Table\ExternalTemperatureTable))
+#5 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/ORM/Table.php(1582): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(App\Model\Table\ExternalTemperatureTable))
+#6 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/ORM/Table.php(1182): Cake\ORM\Table->query()
+#7 /Users/tonyganchev/Projects/meteostation/src/Model/Entity/ExternalTemperature.php(40): Cake\ORM\Table->find()
+#8 /Users/tonyganchev/Projects/meteostation/src/Controller/PagesController.php(78): App\Model\Entity\ExternalTemperature->getLastTemperatureValue()
+#9 /Users/tonyganchev/Projects/meteostation/src/Controller/PagesController.php(64): App\Controller\PagesController->getLastTemperature()
+#10 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Controller/Controller.php(440): App\Controller\PagesController->display('home')
+#11 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#12 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\PagesController))
+#13 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/BaseApplication.php(108): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(104): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#21 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#23 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#24 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 /Users/tonyganchev/Projects/meteostation/webroot/index.php(40): Cake\Http\Server->run()
+#26 {main}
+
+
+2018-02-03 15:21:05 Error: [PDOException] SQLSTATE[HY000] [1203] User bsumeteo_user already has more than 'max_user_connections' active connections
+Request URL: /
+Stack Trace:
+#0 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Database/Driver/PDODriverTrait.php(48): PDO->__construct('mysql:host=john...', 'bsumeteo_user', 'meteo1danni', Array)
+#1 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php(104): Cake\Database\Driver\Mysql->_connect('mysql:host=john...', Array)
+#2 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Database/Schema/BaseSchema.php(45): Cake\Database\Driver\Mysql->connect()
+#3 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Database/Dialect/MysqlDialectTrait.php(63): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Database/Schema/Collection.php(52): Cake\Database\Driver\Mysql->schemaDialect()
+#5 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Database/Schema/CachedCollection.php(42): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Database/Connection.php(369): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/ORM/Table.php(531): Cake\Database\Connection->getSchemaCollection()
+#8 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/ORM/Query.php(211): Cake\ORM\Table->getSchema()
+#9 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/ORM/Query.php(168): Cake\ORM\Query->addDefaultTypes(Object(App\Model\Table\ExternalTemperatureTable))
+#10 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/ORM/Table.php(1582): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(App\Model\Table\ExternalTemperatureTable))
+#11 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/ORM/Table.php(1182): Cake\ORM\Table->query()
+#12 /Users/tonyganchev/Projects/meteostation/src/Model/Entity/ExternalTemperature.php(40): Cake\ORM\Table->find()
+#13 /Users/tonyganchev/Projects/meteostation/src/Controller/PagesController.php(78): App\Model\Entity\ExternalTemperature->getLastTemperatureValue()
+#14 /Users/tonyganchev/Projects/meteostation/src/Controller/PagesController.php(64): App\Controller\PagesController->getLastTemperature()
+#15 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Controller/Controller.php(440): App\Controller\PagesController->display('home')
+#16 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#17 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\PagesController))
+#18 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/BaseApplication.php(108): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(104): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#22 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#24 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#26 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#27 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#28 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#29 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#30 /Users/tonyganchev/Projects/meteostation/webroot/index.php(40): Cake\Http\Server->run()
+#31 {main}
+
+
+2018-02-03 15:21:06 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'bsumeteo_db1.external_temperature' doesn't exist
+Request URL: /
+Stack Trace:
+#0 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Database/Schema/Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'external_temper...', Array, Object(Cake\Database\Schema\TableSchema))
+#1 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Database/Schema/CachedCollection.php(63): Cake\Database\Schema\Collection->describe('external_temper...', Array)
+#2 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/ORM/Table.php(532): Cake\Database\Schema\CachedCollection->describe('external_temper...')
+#3 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/ORM/Query.php(211): Cake\ORM\Table->getSchema()
+#4 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/ORM/Query.php(168): Cake\ORM\Query->addDefaultTypes(Object(App\Model\Table\ExternalTemperatureTable))
+#5 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/ORM/Table.php(1582): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(App\Model\Table\ExternalTemperatureTable))
+#6 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/ORM/Table.php(1182): Cake\ORM\Table->query()
+#7 /Users/tonyganchev/Projects/meteostation/src/Model/Entity/ExternalTemperature.php(40): Cake\ORM\Table->find()
+#8 /Users/tonyganchev/Projects/meteostation/src/Controller/PagesController.php(78): App\Model\Entity\ExternalTemperature->getLastTemperatureValue()
+#9 /Users/tonyganchev/Projects/meteostation/src/Controller/PagesController.php(64): App\Controller\PagesController->getLastTemperature()
+#10 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Controller/Controller.php(440): App\Controller\PagesController->display('home')
+#11 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#12 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\PagesController))
+#13 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/BaseApplication.php(108): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(104): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#21 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#23 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#24 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 /Users/tonyganchev/Projects/meteostation/webroot/index.php(40): Cake\Http\Server->run()
+#26 {main}
+
+
+2018-02-03 15:21:08 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'bsumeteo_db1.external_temperature' doesn't exist
+Request URL: /
+Stack Trace:
+#0 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Database/Schema/Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'external_temper...', Array, Object(Cake\Database\Schema\TableSchema))
+#1 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Database/Schema/CachedCollection.php(63): Cake\Database\Schema\Collection->describe('external_temper...', Array)
+#2 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/ORM/Table.php(532): Cake\Database\Schema\CachedCollection->describe('external_temper...')
+#3 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/ORM/Query.php(211): Cake\ORM\Table->getSchema()
+#4 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/ORM/Query.php(168): Cake\ORM\Query->addDefaultTypes(Object(App\Model\Table\ExternalTemperatureTable))
+#5 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/ORM/Table.php(1582): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(App\Model\Table\ExternalTemperatureTable))
+#6 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/ORM/Table.php(1182): Cake\ORM\Table->query()
+#7 /Users/tonyganchev/Projects/meteostation/src/Model/Entity/ExternalTemperature.php(40): Cake\ORM\Table->find()
+#8 /Users/tonyganchev/Projects/meteostation/src/Controller/PagesController.php(78): App\Model\Entity\ExternalTemperature->getLastTemperatureValue()
+#9 /Users/tonyganchev/Projects/meteostation/src/Controller/PagesController.php(64): App\Controller\PagesController->getLastTemperature()
+#10 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Controller/Controller.php(440): App\Controller\PagesController->display('home')
+#11 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#12 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\PagesController))
+#13 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/BaseApplication.php(108): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(104): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#21 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#23 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#24 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 /Users/tonyganchev/Projects/meteostation/webroot/index.php(40): Cake\Http\Server->run()
+#26 {main}
+
+
+2018-02-03 15:21:11 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'bsumeteo_db1.external_temperature' doesn't exist
+Request URL: /
+Stack Trace:
+#0 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Database/Schema/Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'external_temper...', Array, Object(Cake\Database\Schema\TableSchema))
+#1 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Database/Schema/CachedCollection.php(63): Cake\Database\Schema\Collection->describe('external_temper...', Array)
+#2 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/ORM/Table.php(532): Cake\Database\Schema\CachedCollection->describe('external_temper...')
+#3 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/ORM/Query.php(211): Cake\ORM\Table->getSchema()
+#4 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/ORM/Query.php(168): Cake\ORM\Query->addDefaultTypes(Object(App\Model\Table\ExternalTemperatureTable))
+#5 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/ORM/Table.php(1582): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(App\Model\Table\ExternalTemperatureTable))
+#6 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/ORM/Table.php(1182): Cake\ORM\Table->query()
+#7 /Users/tonyganchev/Projects/meteostation/src/Model/Entity/ExternalTemperature.php(40): Cake\ORM\Table->find()
+#8 /Users/tonyganchev/Projects/meteostation/src/Controller/PagesController.php(78): App\Model\Entity\ExternalTemperature->getLastTemperatureValue()
+#9 /Users/tonyganchev/Projects/meteostation/src/Controller/PagesController.php(64): App\Controller\PagesController->getLastTemperature()
+#10 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Controller/Controller.php(440): App\Controller\PagesController->display('home')
+#11 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#12 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\PagesController))
+#13 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/BaseApplication.php(108): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(104): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#21 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#23 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#24 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 /Users/tonyganchev/Projects/meteostation/webroot/index.php(40): Cake\Http\Server->run()
+#26 {main}
+
+
+2018-02-15 22:51:17 Error: [Cake\View\Exception\MissingTemplateException] Template file "Pages/home.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Pages/home.ctp',
+)
+Request URL: /
+Stack Trace:
+#0 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/View/View.php(761): Cake\View\View->_getViewFileName('Pages/home')
+#1 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Controller/Controller.php(623): Cake\View\View->render('home', NULL)
+#2 /Users/tonyganchev/Projects/meteostation/src/Controller/PagesController.php(66): Cake\Controller\Controller->render('home')
+#3 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Controller/Controller.php(440): App\Controller\PagesController->display('home')
+#4 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#5 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\PagesController))
+#6 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/BaseApplication.php(108): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(104): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 /Users/tonyganchev/Projects/meteostation/webroot/index.php(40): Cake\Http\Server->run()
+#19 {main}
+
+
+2018-02-15 22:58:44 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /css/font-awesome-all.css
+Referer URL: http://meteostation.local/
+Stack Trace:
+#0 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/ControllerFactory.php(38): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(90): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/BaseApplication.php(108): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(104): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /Users/tonyganchev/Projects/meteostation/webroot/index.php(40): Cake\Http\Server->run()
+#15 {main}
+
+
+2018-02-15 22:58:49 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /css/font-awesome-all.css
+Referer URL: http://meteostation.local/
+Stack Trace:
+#0 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/ControllerFactory.php(38): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(90): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/BaseApplication.php(108): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(104): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /Users/tonyganchev/Projects/meteostation/webroot/index.php(40): Cake\Http\Server->run()
+#15 {main}
+
+
+2018-02-15 22:59:04 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /css/font-awesome-all.css
+Referer URL: http://meteostation.local/
+Stack Trace:
+#0 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/ControllerFactory.php(38): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(90): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/BaseApplication.php(108): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(104): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /Users/tonyganchev/Projects/meteostation/webroot/index.php(40): Cake\Http\Server->run()
+#15 {main}
+
+
+2018-02-15 22:59:06 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /css/font-awesome-all.css
+Referer URL: http://meteostation.local/
+Stack Trace:
+#0 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/ControllerFactory.php(38): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(90): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/BaseApplication.php(108): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(104): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /Users/tonyganchev/Projects/meteostation/webroot/index.php(40): Cake\Http\Server->run()
+#15 {main}
+
+
+2018-02-15 23:00:09 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /css/font-awesome-all.css
+Referer URL: http://meteostation.local/
+Stack Trace:
+#0 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/ControllerFactory.php(38): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(90): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/BaseApplication.php(108): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(104): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /Users/tonyganchev/Projects/meteostation/webroot/index.php(40): Cake\Http\Server->run()
+#15 {main}
+
+
+2018-02-15 23:00:12 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /css/font-awesome-all.css
+Referer URL: http://meteostation.local/
+Stack Trace:
+#0 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/ControllerFactory.php(38): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(90): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/BaseApplication.php(108): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(104): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /Users/tonyganchev/Projects/meteostation/webroot/index.php(40): Cake\Http\Server->run()
+#15 {main}
+
+
+2018-02-15 23:03:04 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /css/font-awesome-all.css
+Referer URL: http://meteostation.local/
+Stack Trace:
+#0 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/ControllerFactory.php(38): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(90): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/BaseApplication.php(108): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(104): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /Users/tonyganchev/Projects/meteostation/webroot/index.php(40): Cake\Http\Server->run()
+#15 {main}
+
+
+2018-02-15 23:04:31 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /css/font-awesome-all.css
+Referer URL: http://meteostation.local/
+Stack Trace:
+#0 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/ControllerFactory.php(38): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(90): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/BaseApplication.php(108): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(104): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /Users/tonyganchev/Projects/meteostation/webroot/index.php(40): Cake\Http\Server->run()
+#15 {main}
+
+
+2018-02-15 23:04:35 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /css/font-awesome-all.css
+Referer URL: http://meteostation.local/
+Stack Trace:
+#0 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/ControllerFactory.php(38): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(90): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/BaseApplication.php(108): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(104): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /Users/tonyganchev/Projects/meteostation/webroot/index.php(40): Cake\Http\Server->run()
+#15 {main}
+
+
+2018-02-15 23:04:47 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /css/font-awesome-all.css
+Referer URL: http://meteostation.local/
+Stack Trace:
+#0 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/ControllerFactory.php(38): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(90): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/BaseApplication.php(108): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(104): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /Users/tonyganchev/Projects/meteostation/webroot/index.php(40): Cake\Http\Server->run()
+#15 {main}
+
+
+2018-02-15 23:09:53 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /css/font-awesome-all.css
+Referer URL: http://meteostation.local/
+Stack Trace:
+#0 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/ControllerFactory.php(38): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(90): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/BaseApplication.php(108): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(104): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /Users/tonyganchev/Projects/meteostation/webroot/index.php(40): Cake\Http\Server->run()
+#15 {main}
+
+
+2018-02-15 23:11:23 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /css/font-awesome-all.css
+Referer URL: http://meteostation.local/
+Stack Trace:
+#0 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/ControllerFactory.php(38): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(90): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/BaseApplication.php(108): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(104): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /Users/tonyganchev/Projects/meteostation/webroot/index.php(40): Cake\Http\Server->run()
+#15 {main}
+
+
+2018-02-15 23:11:28 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /css/font-awesome-all.css
+Referer URL: http://meteostation.local/
+Stack Trace:
+#0 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/ControllerFactory.php(38): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(90): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/BaseApplication.php(108): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(104): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /Users/tonyganchev/Projects/meteostation/webroot/index.php(40): Cake\Http\Server->run()
+#15 {main}
+
+
+2018-02-15 23:12:30 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /css/font-awesome-all.css
+Referer URL: http://meteostation.local/
+Stack Trace:
+#0 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/ControllerFactory.php(38): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(90): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/BaseApplication.php(108): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(104): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /Users/tonyganchev/Projects/meteostation/webroot/index.php(40): Cake\Http\Server->run()
+#15 {main}
+
+
+2018-02-15 23:26:42 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'bsumeteo_db1.external_temperature' doesn't exist
+Request URL: /
+Stack Trace:
+#0 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Database/Schema/Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'external_temper...', Array, Object(Cake\Database\Schema\TableSchema))
+#1 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Database/Schema/CachedCollection.php(63): Cake\Database\Schema\Collection->describe('external_temper...', Array)
+#2 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/ORM/Table.php(532): Cake\Database\Schema\CachedCollection->describe('external_temper...')
+#3 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/ORM/Query.php(211): Cake\ORM\Table->getSchema()
+#4 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/ORM/Query.php(168): Cake\ORM\Query->addDefaultTypes(Object(App\Model\Table\ExternalTemperatureTable))
+#5 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/ORM/Table.php(1582): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(App\Model\Table\ExternalTemperatureTable))
+#6 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/ORM/Table.php(1182): Cake\ORM\Table->query()
+#7 /Users/tonyganchev/Projects/meteostation/src/Model/Entity/ExternalTemperature.php(40): Cake\ORM\Table->find()
+#8 /Users/tonyganchev/Projects/meteostation/src/Controller/PagesController.php(78): App\Model\Entity\ExternalTemperature->getLastTemperatureValue()
+#9 /Users/tonyganchev/Projects/meteostation/src/Controller/PagesController.php(64): App\Controller\PagesController->getLastTemperature()
+#10 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Controller/Controller.php(440): App\Controller\PagesController->display('home')
+#11 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#12 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\PagesController))
+#13 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/BaseApplication.php(108): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(104): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#21 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#23 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#24 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 /Users/tonyganchev/Projects/meteostation/webroot/index.php(40): Cake\Http\Server->run()
+#26 {main}
+
+
+2018-02-15 23:28:54 Warning: Warning (2): error_log() expects parameter 1 to be string, object given in [/Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Database/Schema/Collection.php, line 96]
+Request URL: /
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+error_log - [internal], line ??
+Cake\Database\Schema\Collection::describe() - CORE/src/Database/Schema/Collection.php, line 96
+Cake\Database\Schema\CachedCollection::describe() - CORE/src/Database/Schema/CachedCollection.php, line 63
+Cake\ORM\Table::getSchema() - CORE/src/ORM/Table.php, line 532
+Cake\ORM\Query::addDefaultTypes() - CORE/src/ORM/Query.php, line 211
+Cake\ORM\Query::__construct() - CORE/src/ORM/Query.php, line 168
+Cake\ORM\Table::query() - CORE/src/ORM/Table.php, line 1582
+Cake\ORM\Table::find() - CORE/src/ORM/Table.php, line 1182
+App\Model\Entity\ExternalTemperature::getLastTemperatureValue() - APP/Model/Entity/ExternalTemperature.php, line 40
+App\Controller\PagesController::getLastTemperature() - APP/Controller/PagesController.php, line 78
+App\Controller\PagesController::display() - APP/Controller/PagesController.php, line 64
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 440
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 119
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 108
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 104
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 98
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2018-02-15 23:28:54 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'bsumeteo_db1.external_temperature' doesn't exist
+Request URL: /
+Stack Trace:
+#0 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Database/Schema/Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'external_temper...', Array, Object(Cake\Database\Schema\TableSchema))
+#1 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Database/Schema/CachedCollection.php(63): Cake\Database\Schema\Collection->describe('external_temper...', Array)
+#2 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/ORM/Table.php(532): Cake\Database\Schema\CachedCollection->describe('external_temper...')
+#3 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/ORM/Query.php(211): Cake\ORM\Table->getSchema()
+#4 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/ORM/Query.php(168): Cake\ORM\Query->addDefaultTypes(Object(App\Model\Table\ExternalTemperatureTable))
+#5 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/ORM/Table.php(1582): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(App\Model\Table\ExternalTemperatureTable))
+#6 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/ORM/Table.php(1182): Cake\ORM\Table->query()
+#7 /Users/tonyganchev/Projects/meteostation/src/Model/Entity/ExternalTemperature.php(40): Cake\ORM\Table->find()
+#8 /Users/tonyganchev/Projects/meteostation/src/Controller/PagesController.php(78): App\Model\Entity\ExternalTemperature->getLastTemperatureValue()
+#9 /Users/tonyganchev/Projects/meteostation/src/Controller/PagesController.php(64): App\Controller\PagesController->getLastTemperature()
+#10 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Controller/Controller.php(440): App\Controller\PagesController->display('home')
+#11 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#12 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\PagesController))
+#13 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/BaseApplication.php(108): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(104): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#21 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#23 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#24 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 /Users/tonyganchev/Projects/meteostation/webroot/index.php(40): Cake\Http\Server->run()
+#26 {main}
+
+
+2018-02-15 23:28:54 Warning: Warning (2): error_log() expects parameter 1 to be string, object given in [/Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Database/Schema/Collection.php, line 96]
+Request URL: /
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+error_log - [internal], line ??
+Cake\Database\Schema\Collection::describe() - CORE/src/Database/Schema/Collection.php, line 96
+Cake\Database\Schema\CachedCollection::describe() - CORE/src/Database/Schema/CachedCollection.php, line 63
+Cake\ORM\Table::getSchema() - CORE/src/ORM/Table.php, line 532
+Cake\ORM\Table::getPrimaryKey() - CORE/src/ORM/Table.php, line 653
+Cake\ORM\Marshaller::one() - CORE/src/ORM/Marshaller.php, line 171
+Cake\ORM\Table::newEntity() - CORE/src/ORM/Table.php, line 2428
+DebugKit\ToolbarService::saveData() - ROOT/vendor/cakephp/debug_kit/src/ToolbarService.php, line 185
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 53
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2018-02-15 23:28:55 Warning: Warning (2): error_log() expects parameter 1 to be string, object given in [/Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Database/Schema/Collection.php, line 96]
+Request URL: /
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+error_log - [internal], line ??
+Cake\Database\Schema\Collection::describe() - CORE/src/Database/Schema/Collection.php, line 96
+Cake\Database\Schema\CachedCollection::describe() - CORE/src/Database/Schema/CachedCollection.php, line 63
+Cake\ORM\Table::getSchema() - CORE/src/ORM/Table.php, line 532
+Cake\ORM\Table::getPrimaryKey() - CORE/src/ORM/Table.php, line 653
+Cake\ORM\Marshaller::one() - CORE/src/ORM/Marshaller.php, line 171
+Cake\ORM\Table::newEntity() - CORE/src/ORM/Table.php, line 2428
+Cake\ORM\Association::__call() - CORE/src/ORM/Association.php, line 1365
+DebugKit\ToolbarService::saveData() - ROOT/vendor/cakephp/debug_kit/src/ToolbarService.php, line 202
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 53
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2018-02-15 23:28:55 Warning: Warning (512): Unable to emit headers. Headers sent in file=/Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Error/Debugger.php line=850 in [/Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 48]
+Request URL: /
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+Cake\Http\ResponseEmitter::emit() - CORE/src/Http/ResponseEmitter.php, line 48
+Cake\Http\Server::emit() - CORE/src/Http/Server.php, line 106
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2018-02-15 23:28:55 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Error/Debugger.php:850) in [/Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 148]
+Request URL: /
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE/src/Http/ResponseEmitter.php, line 148
+Cake\Http\ResponseEmitter::emit() - CORE/src/Http/ResponseEmitter.php, line 54
+Cake\Http\Server::emit() - CORE/src/Http/Server.php, line 106
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2018-02-15 23:28:55 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Error/Debugger.php:850) in [/Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 181]
+Request URL: /
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE/src/Http/ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE/src/Http/ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE/src/Http/Server.php, line 106
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2018-02-15 23:28:55 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Error/Debugger.php:850) in [/Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 181]
+Request URL: /
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE/src/Http/ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE/src/Http/ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE/src/Http/Server.php, line 106
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2018-02-15 23:29:13 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'bsumeteo_db1.external_temperature' doesn't exist
+Request URL: /
+Stack Trace:
+#0 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Database/Schema/Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'external_temper...', Array, Object(Cake\Database\Schema\TableSchema))
+#1 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Database/Schema/CachedCollection.php(63): Cake\Database\Schema\Collection->describe('external_temper...', Array)
+#2 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/ORM/Table.php(532): Cake\Database\Schema\CachedCollection->describe('external_temper...')
+#3 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/ORM/Query.php(211): Cake\ORM\Table->getSchema()
+#4 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/ORM/Query.php(168): Cake\ORM\Query->addDefaultTypes(Object(App\Model\Table\ExternalTemperatureTable))
+#5 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/ORM/Table.php(1582): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(App\Model\Table\ExternalTemperatureTable))
+#6 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/ORM/Table.php(1182): Cake\ORM\Table->query()
+#7 /Users/tonyganchev/Projects/meteostation/src/Model/Entity/ExternalTemperature.php(40): Cake\ORM\Table->find()
+#8 /Users/tonyganchev/Projects/meteostation/src/Controller/PagesController.php(78): App\Model\Entity\ExternalTemperature->getLastTemperatureValue()
+#9 /Users/tonyganchev/Projects/meteostation/src/Controller/PagesController.php(64): App\Controller\PagesController->getLastTemperature()
+#10 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Controller/Controller.php(440): App\Controller\PagesController->display('home')
+#11 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#12 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\PagesController))
+#13 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/BaseApplication.php(108): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(104): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#21 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#23 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#24 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 /Users/tonyganchev/Projects/meteostation/webroot/index.php(40): Cake\Http\Server->run()
+#26 {main}
+
+
+2018-02-15 23:29:31 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'bsumeteo_db1.external_temperature' doesn't exist
+Request URL: /
+Stack Trace:
+#0 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Database/Schema/Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'external_temper...', Array, Object(Cake\Database\Schema\TableSchema))
+#1 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Database/Schema/CachedCollection.php(63): Cake\Database\Schema\Collection->describe('external_temper...', Array)
+#2 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/ORM/Table.php(532): Cake\Database\Schema\CachedCollection->describe('external_temper...')
+#3 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/ORM/Query.php(211): Cake\ORM\Table->getSchema()
+#4 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/ORM/Query.php(168): Cake\ORM\Query->addDefaultTypes(Object(App\Model\Table\ExternalTemperatureTable))
+#5 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/ORM/Table.php(1582): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(App\Model\Table\ExternalTemperatureTable))
+#6 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/ORM/Table.php(1182): Cake\ORM\Table->query()
+#7 /Users/tonyganchev/Projects/meteostation/src/Model/Entity/ExternalTemperature.php(40): Cake\ORM\Table->find()
+#8 /Users/tonyganchev/Projects/meteostation/src/Controller/PagesController.php(78): App\Model\Entity\ExternalTemperature->getLastTemperatureValue()
+#9 /Users/tonyganchev/Projects/meteostation/src/Controller/PagesController.php(64): App\Controller\PagesController->getLastTemperature()
+#10 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Controller/Controller.php(440): App\Controller\PagesController->display('home')
+#11 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#12 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\PagesController))
+#13 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/BaseApplication.php(108): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(104): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#21 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#23 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#24 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 /Users/tonyganchev/Projects/meteostation/webroot/index.php(40): Cake\Http\Server->run()
+#26 {main}
+
+
+2018-02-15 23:46:15 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'bsumeteo_db1.external_temperature' doesn't exist
+Request URL: /
+Stack Trace:
+#0 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Database/Schema/Collection.php(96): Cake\Database\Schema\Collection->_reflect('Column', 'external_temper...', Array, Object(Cake\Database\Schema\TableSchema))
+#1 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Database/Schema/CachedCollection.php(63): Cake\Database\Schema\Collection->describe('external_temper...', Array)
+#2 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/ORM/Table.php(532): Cake\Database\Schema\CachedCollection->describe('external_temper...')
+#3 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/ORM/Query.php(211): Cake\ORM\Table->getSchema()
+#4 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/ORM/Query.php(168): Cake\ORM\Query->addDefaultTypes(Object(App\Model\Table\ExternalTemperatureTable))
+#5 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/ORM/Table.php(1582): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(App\Model\Table\ExternalTemperatureTable))
+#6 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/ORM/Table.php(1182): Cake\ORM\Table->query()
+#7 /Users/tonyganchev/Projects/meteostation/src/Model/Entity/ExternalTemperature.php(40): Cake\ORM\Table->find()
+#8 /Users/tonyganchev/Projects/meteostation/src/Controller/PagesController.php(80): App\Model\Entity\ExternalTemperature->getLastTemperatureValue()
+#9 /Users/tonyganchev/Projects/meteostation/src/Controller/PagesController.php(65): App\Controller\PagesController->getLastTemperature()
+#10 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Controller/Controller.php(440): App\Controller\PagesController->display('home')
+#11 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#12 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\PagesController))
+#13 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/BaseApplication.php(108): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(104): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#21 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#23 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#24 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 /Users/tonyganchev/Projects/meteostation/webroot/index.php(40): Cake\Http\Server->run()
+#26 {main}
+
+
+2018-02-15 23:46:42 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'bsumeteo_db1.external_temperature' doesn't exist
+Request URL: /
+Stack Trace:
+#0 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Database/Schema/Collection.php(96): Cake\Database\Schema\Collection->_reflect('Column', 'external_temper...', Array, Object(Cake\Database\Schema\TableSchema))
+#1 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Database/Schema/CachedCollection.php(63): Cake\Database\Schema\Collection->describe('external_temper...', Array)
+#2 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/ORM/Table.php(532): Cake\Database\Schema\CachedCollection->describe('external_temper...')
+#3 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/ORM/Query.php(211): Cake\ORM\Table->getSchema()
+#4 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/ORM/Query.php(168): Cake\ORM\Query->addDefaultTypes(Object(App\Model\Table\ExternalTemperatureTable))
+#5 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/ORM/Table.php(1582): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(App\Model\Table\ExternalTemperatureTable))
+#6 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/ORM/Table.php(1182): Cake\ORM\Table->query()
+#7 /Users/tonyganchev/Projects/meteostation/src/Model/Entity/ExternalTemperature.php(40): Cake\ORM\Table->find()
+#8 /Users/tonyganchev/Projects/meteostation/src/Controller/PagesController.php(80): App\Model\Entity\ExternalTemperature->getLastTemperatureValue()
+#9 /Users/tonyganchev/Projects/meteostation/src/Controller/PagesController.php(65): App\Controller\PagesController->getLastTemperature()
+#10 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Controller/Controller.php(440): App\Controller\PagesController->display('home')
+#11 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#12 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\PagesController))
+#13 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/BaseApplication.php(108): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(104): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#21 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#23 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#24 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 /Users/tonyganchev/Projects/meteostation/webroot/index.php(40): Cake\Http\Server->run()
+#26 {main}
+
+

@@ -1,0 +1,19 @@
+2018-02-15 23:33:03 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'bsumeteo_db1.energy_production' doesn't exist in /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Database/Schema/Collection.php on line 130
+Stack Trace:
+#0 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Database/Schema/Collection.php(96): Cake\Database\Schema\Collection->_reflect('Column', 'energy_producti...', Array, Object(Cake\Database\Schema\TableSchema))
+#1 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Database/Schema/CachedCollection.php(63): Cake\Database\Schema\Collection->describe('energy_producti...', Array)
+#2 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/ORM/Table.php(532): Cake\Database\Schema\CachedCollection->describe('energy_producti...')
+#3 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(324): Cake\ORM\Table->getSchema()
+#4 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(221): Bake\Shell\Task\ModelTask->findBelongsTo(Object(App\Model\Table\EnergyProductionTable), Array)
+#5 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(130): Bake\Shell\Task\ModelTask->getAssociations(Object(App\Model\Table\EnergyProductionTable))
+#6 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(113): Bake\Shell\Task\ModelTask->getTableContext(Object(App\Model\Table\EnergyProductionTable), 'energy_producti...', 'EnergyProductio...')
+#7 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(100): Bake\Shell\Task\ModelTask->bake('EnergyProductio...')
+#8 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/bake/src/Shell/BakeShell.php(264): Bake\Shell\Task\ModelTask->main('EnergyProductio...')
+#9 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Collection/CollectionTrait.php(51): Bake\Shell\BakeShell->Bake\Shell\{closure}('EnergyProductio...', 0)
+#10 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/bake/src/Shell/BakeShell.php(265): Cake\Collection\Collection->each(Object(Closure))
+#11 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Console/Shell.php(493): Bake\Shell\BakeShell->all('Energy_Producti...')
+#12 /Users/tonyganchev/Projects/meteostation/vendor/cakephp/cakephp/src/Console/CommandRunner.php(141): Cake\Console\Shell->runCommand(Array, true)
+#13 /Users/tonyganchev/Projects/meteostation/bin/cake.php(12): Cake\Console\CommandRunner->run(Array)
+#14 {main}
+
+
